@@ -55,6 +55,7 @@ function updatePage(){
     case 3: document.getElementById('hangmanpic').src = 'img/h4.JPG'; break;
     case 4: document.getElementById('hangmanpic').src = 'img/h3.JPG'; break;
     case 2: document.getElementById('hangmanpic').src = 'img/h5.JPG'; break;
-    case 1: document.getElementById('hangmanpic').src = 'img/h6.JPG'; break;
+    case 1: document.getElementById('hangmanpic').src = 'img/h6.jpg'; break;
+    case 0: document.getElementById('hangmanpic').src = 'img/h7.JPG'; break;
   }
 }
