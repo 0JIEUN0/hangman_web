@@ -31,9 +31,12 @@ function updatePage(){
   }
   var temp = str.split('');
   for(i=0; i<guesses.length; i++){
-    var tmp = word.indexOf(guesses[i]);
-    if(tmp<0) continue;
-    temp[word.indexOf(guesses[i])] = guesses[i];
+    var idx = word.indexOf(guesses[i]);
+    if(idx<0) continue;
+    while(idx>=0){
+      temp[idx] = guesses[i];
+      idx = word.indexOf(guesses[i], idx+1);
+    }
   }
   str = (temp.join(' ')).replace(/,/g, '');
   document.getElementById('clue').innerHTML =str;
