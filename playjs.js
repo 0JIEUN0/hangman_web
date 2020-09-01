@@ -45,11 +45,11 @@ function updatePage(){
   else document.getElementById('guessstr').innerHTML = "GUESSED: "+guesses;
   switch(guessCount){
     //case 6: document.getElementById('hangmanpic').src = 'img/h1.jpg'; break;
-    case 5: document.getElementById('hangmanpic').src = 'img/h2.jpg'; break;
-    case 4: document.getElementById('hangmanpic').src = 'img/h3.jpg'; break;
-    case 3: document.getElementById('hangmanpic').src = 'img/h4.jpg'; break;
-    case 2: document.getElementById('hangmanpic').src = 'img/h5.jpg'; break;
-    case 1: document.getElementById('hangmanpic').src = 'img/h6.jpg'; break;
+    case 5: document.getElementById('hangmanpic').src = 'img/h2.JPG'; break;
+    case 3: document.getElementById('hangmanpic').src = 'img/h4.JPG'; break;
+    case 4: document.getElementById('hangmanpic').src = 'img/h3.JPG'; break;
+    case 2: document.getElementById('hangmanpic').src = 'img/h5.JPG'; break;
+    case 1: document.getElementById('hangmanpic').src = 'img/h6.JPG'; break;
   }
 
 
