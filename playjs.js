@@ -10,6 +10,7 @@ function newGame(){
   guessCount=MAX_GUESSES;
   guesses = '';
   document.getElementById('guessbutton').disabled = false;
+  document.getElementById('hangmanpic').src = 'img/h1.JPG';
   updatePage();
 }
 function guessLetter(){
@@ -40,11 +41,16 @@ function updatePage(){
   }
   str = (temp.join(' ')).replace(/,/g, '');
   document.getElementById('clue').innerHTML =str;
-  if(guessCount==0) document.getElementById('guessstr').innerHTML = "YOU LOSE";
-  else if(str.indexOf('_')<0) document.getElementById('guessstr').innerHTML = "YOU WIN";
+  if(guessCount==0) {
+    document.getElementById('guessstr').innerHTML = "YOU LOSE";
+    alert('umm.... try again \'\'');
+  }
+  else if(str.indexOf('_')<0) {
+    document.getElementById('guessstr').innerHTML = "YOU WIN";
+    alert('Congratulations!!!')
+  }
   else document.getElementById('guessstr').innerHTML = "GUESSED: "+guesses;
   switch(guessCount){
-    case 6: document.getElementById('hangmanpic').src = 'img/h1.JPG'; break;
     case 5: document.getElementById('hangmanpic').src = 'img/h2.JPG'; break;
     case 3: document.getElementById('hangmanpic').src = 'img/h4.JPG'; break;
     case 4: document.getElementById('hangmanpic').src = 'img/h3.JPG'; break;
