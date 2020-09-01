@@ -41,6 +41,14 @@ function updatePage(){
   }
   str = (temp.join(' ')).replace(/,/g, '');
   document.getElementById('clue').innerHTML =str;
+  switch(guessCount){
+    case 5: document.getElementById('hangmanpic').src = 'img/h2.JPG'; break;
+    case 3: document.getElementById('hangmanpic').src = 'img/h4.JPG'; break;
+    case 4: document.getElementById('hangmanpic').src = 'img/h3.JPG'; break;
+    case 2: document.getElementById('hangmanpic').src = 'img/h5.JPG'; break;
+    case 1: document.getElementById('hangmanpic').src = 'img/h6.JPG'; break;
+    case 0: document.getElementById('hangmanpic').src = 'img/h7.JPG'; break;
+  }
   if(guessCount==0) {
     document.getElementById('guessstr').innerHTML = "YOU LOSE";
     alert('umm.... try again \'\'');
@@ -50,12 +58,4 @@ function updatePage(){
     alert('Congratulations!!!')
   }
   else document.getElementById('guessstr').innerHTML = "GUESSED: "+guesses;
-  switch(guessCount){
-    case 5: document.getElementById('hangmanpic').src = 'img/h2.JPG'; break;
-    case 3: document.getElementById('hangmanpic').src = 'img/h4.JPG'; break;
-    case 4: document.getElementById('hangmanpic').src = 'img/h3.JPG'; break;
-    case 2: document.getElementById('hangmanpic').src = 'img/h5.JPG'; break;
-    case 1: document.getElementById('hangmanpic').src = 'img/h6.JPG'; break;
-    case 0: document.getElementById('hangmanpic').src = 'img/h7.JPG'; break;
-  }
 }
