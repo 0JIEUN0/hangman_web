@@ -44,7 +44,7 @@ function updatePage(){
   else if(str.indexOf('_')<0) document.getElementById('guessstr').innerHTML = "YOU WIN";
   else document.getElementById('guessstr').innerHTML = "GUESSED: "+guesses;
   switch(guessCount){
-    //case 6: document.getElementById('hangmanpic').src = 'img/h1.jpg'; break;
+    case 6: document.getElementById('hangmanpic').src = 'img/h1.jpg'; break;
     case 5: document.getElementById('hangmanpic').src = 'img/h2.JPG'; break;
     case 3: document.getElementById('hangmanpic').src = 'img/h4.JPG'; break;
     case 4: document.getElementById('hangmanpic').src = 'img/h3.JPG'; break;
