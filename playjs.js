@@ -1,4 +1,4 @@
-var POSSIBLE_WORDS=['obdurate', 'verisimilitude', 'defenestrate', 'obsequious', 'dissonant', 'today', 'idempotent'];
+var POSSIBLE_WORDS=['obdurate', 'verisimilitude', 'defenestrate', 'obsequious', 'dissonant', 'today', 'idempotent', 'happy', 'jieun', 'document', 'mamamoo','chocolate','sugar'];
 var MAX_GUESSES = 6;
 
 var guesses = '';
@@ -6,7 +6,7 @@ var guessCount = MAX_GUESSES;
 var word;
 
 function newGame(){
-  word = POSSIBLE_WORDS[Math.floor((Math.random()*6))+1];
+  word = POSSIBLE_WORDS[Math.floor((Math.random()*(POSSIBLE_WORDS.length - 1))+1)];
   guessCount=MAX_GUESSES;
   guesses = '';
   document.getElementById('guessbutton').disabled = false;
